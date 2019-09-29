@@ -2,7 +2,7 @@ import nmap
 import optparse
 '''
 python-namp
-need installed nmap first
+need installed nmap first (https://nmap.org/download.html)
 must use IP as tgtHost
 '''
 def nmapScan(tgtHost, tgtPort):
@@ -26,3 +26,8 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
+#[root@NickCOS72V1 python]# python NmapScan.py -H 16.155.194.52 -p 80
+# [*] 16.155.194.52 tcp/80 closed
+#[root@NickCOS72V1 python]# python NmapScan.py -H 16.155.194.52 -p 22
+# [*] 16.155.194.52 tcp/22 open
