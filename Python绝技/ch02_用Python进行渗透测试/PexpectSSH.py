@@ -37,3 +37,8 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+#[root@NickCOS72V1 python]# python PexpectSSH.py
+#cat /etc/shadow | grep root
+#root:$6$8m3G3lUK$H3cWyHO27W.wB.vXHizi/9LaHKc.O0F3llrO9bT51KUeQRTI/qm3Y/mYJ4OTk404caM5BQ3.SO5CuaKQjg49G0:17837:0:99999:7:::
+#[root@SGDLITVM0172 ~]
