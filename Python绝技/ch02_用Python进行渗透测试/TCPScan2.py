@@ -45,7 +45,7 @@ def main():
     parser.add_option('-p', dest='tgtPort', type='string', help='specify target port[s] separated by comma')
     (options, args) = parser.parse_args()
     tgtHost = options.tgtHost
-    tgtPorts = str(options.tgtPort).split(', ')
+    tgtPorts = str(options.tgtPort).split(',')
     if (tgtHost is None) | (tgtPorts[0] is None):
         print parser.usage
         exit(0)
@@ -53,3 +53,14 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
+#[root@NickCOS72V1 python]# python TCPScan2.py -H www.baidu.com -p 80,443,5432
+#
+#[+] Scan Restuls for 104.193.88.123
+#[+]443/tcp open
+#[+]
+#[+]80/tcp open
+#[+] HTTP/1.1 400 Bad Request
+#
+#
+#[-]5432/tcp closed
